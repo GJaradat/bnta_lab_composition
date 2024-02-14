@@ -1,6 +1,7 @@
 package garage.air;
 
 import garage.Vehicle;
+import garage.radar.IRadar;
 
 public class AirBalloon extends Vehicle implements IAirVehicle {
     private int capacity;

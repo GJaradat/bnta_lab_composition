@@ -1,15 +1,19 @@
 package garage.air;
 
 import garage.Vehicle;
+import garage.radar.IRadar;
 
-public class Plane extends Vehicle implements IAirVehicle {
+public class Plane extends Vehicle implements IAirVehicle, IRadar {
     private int capacity;
     private String haulType;
 
-    public Plane(int weight, int maxSpeed, int capacity,String haulType){
+    private IRadar radar;
+
+    public Plane(int weight, int maxSpeed, int capacity,String haulType, IRadar radar){
         super(weight,maxSpeed);
         this.capacity = capacity;
         this.haulType = haulType;
+        this.radar = radar;
     }
 
     @Override
@@ -29,4 +33,15 @@ public class Plane extends Vehicle implements IAirVehicle {
     public void setHaulType(String haulType) {
         this.haulType = haulType;
     }
+
+    @Override
+    public int getRange() {
+        return this.radar.getRange();
+    }
+
+    @Override
+    public void setRange(int range) {
+        this.radar.setRange(range);
+    }
+
 }
