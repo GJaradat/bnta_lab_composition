@@ -43,4 +43,12 @@ public class Helicopter extends Vehicle implements IAirVehicle, IRadar {
     public void setRange(int range) {
         this.radar.setRange(range);
     }
+
+    public IRadar getRadar() {
+        return radar;
+    }
+
+    public void setRadar(IRadar radar) {
+        this.radar = radar;
+    }
 }
