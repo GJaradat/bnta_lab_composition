@@ -9,7 +9,7 @@ public class Speedboat extends Vehicle implements IWaterVehicle, IEngine {
     private String hullType;
     private IEngine engine;
 
-    public Speedboat(float weight, int maxSpeed, String hullType, int horsePower, boolean needsCrew, IEngine engine){
+    public Speedboat(float weight, int maxSpeed, String hullType, boolean needsCrew, IEngine engine){
         super(weight, maxSpeed);
         this.needsCrew = needsCrew;
         this.hullType = hullType;
