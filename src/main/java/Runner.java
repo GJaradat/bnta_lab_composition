@@ -1,3 +1,5 @@
+import garage.air.AirBalloon;
+import garage.air.Helicopter;
 import garage.land.Car;
 import garage.engine.CombustionEngine;
 import garage.engine.ElectricEngine;
@@ -17,7 +19,7 @@ public class Runner {
 //        hondaJazz.setEngine(elEngine);
 //        System.out.println(hondaJazz.getHorsePower());
 
-        //Testing
+        //Testing water vehicles
         IEngine boatEngine = new CombustionEngine(42, "01/01/2024");
         Speedboat speedboat = new Speedboat(200, 80, "Aluminium", false, boatEngine);
         System.out.println(speedboat.getHorsePower());
@@ -29,7 +31,13 @@ public class Runner {
         cargoShip.setEngine(new ElectricEngine(500, 100));
         System.out.println(cargoShip.getHorsePower());
 
-        
+        //Testing air vehicles
+        AirBalloon airBalloon = new AirBalloon(20, 5, 4, "Red", 20);
+        System.out.println(airBalloon.getColour());
+        airBalloon.setCapacity(2);
+        System.out.println(airBalloon.getCapacity());
+
+
     }
 
 }
